@@ -35,9 +35,9 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="https://www.youtube.com/" target="_blank">
             <span>
-              Esigned
+              Youtube
             </span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,20 +93,16 @@
                   <div class="detail-box">
                     <div>
                       <h2>
-                        welcome to
-
+                        Kiss Of Life
                       </h2>
                       <h1>
-                        web agency
+                        Bye My Neverland
                       </h1>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
+                        Bye My Neverland -- Kiss Of Life(Album: Kiss Of Life)
                       </p>
                       <div class="">
-                        <a href="">
-                          Contact us
-                        </a>
+                        <button onclick="togglePlayPause(1)">Play Music 1</button>                      
                       </div>
                     </div>
                   </div>
@@ -119,20 +115,16 @@
                   <div class="detail-box">
                     <div>
                       <h2>
-                        welcome to
-
+                        ITZY
                       </h2>
                       <h1>
-                        web agency
+                        Sugar Holic
                       </h1>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
+                        Sugar Holic -- ITZY(Album: Ringo)
                       </p>
                       <div class="">
-                        <a href="">
-                          Contact us
-                        </a>
+                        <button onclick="togglePlayPause(2)">Play Music 2</button>
                       </div>
                     </div>
                   </div>
@@ -145,20 +137,16 @@
                   <div class="detail-box">
                     <div>
                       <h2>
-                        welcome to
-
+                        Boy Next Door
                       </h2>
                       <h1>
-                        web agency
+                        Serenade
                       </h1>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
+                        Serenade -- Boy Next Door(Album: Who!)
                       </p>
                       <div class="">
-                        <a href="">
-                          Contact us
-                        </a>
+                        <button onclick="togglePlayPause(3)">Play Music 3</button>
                       </div>
                     </div>
                   </div>
@@ -171,6 +159,28 @@
       </div>
     </section>
     <!-- end slider section -->
+    <script>
+      var audio1 = new Audio('./mp3/Bye My Neverland.mp3'); 
+      var audio2 = new Audio('./mp3/Sugar Holic.mp3'); 
+      var audio3 = new Audio('./mp3/Serenade.mp3'); 
+      function togglePlayPause(buttonNumber) {
+        var audio;
+    
+        if (buttonNumber === 1) {
+          audio = audio1;
+        } else if (buttonNumber === 2) {
+          audio = audio2;
+        } else if (buttonNumber === 3) {
+          audio = audio3;
+        }
+    
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      }
+    </script>
   </div>
 
   <!-- do section -->
